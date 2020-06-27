@@ -1,6 +1,6 @@
 import sqlite3 as dba_object 
 from sqlite3 import Error
-from modelo import *
+from model.modelo import *
 from os import system, name
 class BaseDatos():
     def sqlite_create_database(self):

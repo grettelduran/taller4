@@ -1,5 +1,6 @@
-from base_datos import BaseDatos
-from modelo import *
+from database.base_datos import BaseDatos
+from model.modelo import *
+from pathlib import Path
 from os import system, name
 
 class Controller:
@@ -8,7 +9,8 @@ class Controller:
         self.inicio()
     def leer_archivo_insertar(self, sub_estacion):
         try:
-            with open('mediciones.csv', 'r') as mediciones:
+            path = Path(__file__).parent / "../mediciones.csv"
+            with open(path, 'r') as mediciones:
                 lineas = mediciones.readlines()
                 lineas = [x.strip() for x in lineas]
                 for item in lineas:
@@ -38,4 +40,3 @@ class Controller:
         objOperador.sub_estacion= objSubEstacion
         self.leer_archivo_insertar(objSubEstacion)
         self.realizar_reporte(objOperador)
-controller = Controller()
