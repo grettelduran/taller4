@@ -4,3 +4,4 @@ La aplicacion se encarga de registar un operador y una sub-estacion solicitando 
 - modelo.py contiene las clases Operador, SubEstacion, Ciudad.
 - basedatos.py contiene la clase BaseDatos que maneja la conexion a sqlite3, creacion de tablas y queries.
 - controller.py contiene la logica del negocio(creacion de objetos, lectura de archivo, creacion reporte).
+- main.py contiene el main que se encarga de llamar al controlador
